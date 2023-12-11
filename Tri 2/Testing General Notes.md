@@ -13,16 +13,17 @@
 
 ## Types of Testing
 
-Unit Testing
+Different types of testing and their functionality listed
+**Unit Testing**
 
 * do methods and classes do what we expect? We write unit tests that answer this key question
-Integration Testing
+**Integration Testing**
 * Do various small classes and systems interact with each other in the same way we expect?
 * These will mostly always be black box tests
-System Testing
+**System Testing**
 * done by people after project is released
 * Does the entire project work as expected?
-Acceptance testing
+**Acceptance testing**
 * done by people after project is released
 * Do people/client like the client we've produced?
 
@@ -53,5 +54,41 @@ Acceptance testing
 ## Equivalence Class Partitioning
 
 * Ranges: if you're testing password for example, you want to split into parts where its less than the required length, within the required length, and more than the required length
-* Enumerables: you only have to test bus one type of enum if you have it, you don't have to test them all
-* Domain Charactestistics
+* Enumerable: you only have to test bus one type of enum if you have it, you don't have to test them all
+* Domain Characteristics
+* Each equivalence class is a group of inputs and outputs that you would expect to behave similarly
+
+## Boundary Value Analysis
+
+* Type of testing where the goal is to find the edge cases and make sure you still have the expected behavior then
+* For example for a password 6-20 characters in length, you boundary values to test would be 5, 6, 7, 19, 20, 21
+* For linked list:
+  * Test for size 0 list, null list, size 1 list, size 2 list, etc for boundary values
+* For trees:
+  * Null tree, size 2 tree left element child only, size 2 tree right element child only, etc. for boundary values
+
+## Handling Dependencies
+
+* usually classes aren't independent and rely on other classes
+* you use **test doubles** to make tests with dependencies
+* Test Doubles have mocks and stubs under them
+* Stubs are for modeling inputs to the system
+* Mocks are for modeling outputs from the system
+* Dummies are classes that have no behavior and are just used for testing
+
+## Practice Exercise: Equivalence Calculator
+
+### Equivalence Class Patterns/Tests
+
+* Operations on two positive integers
+* Operations on two negative integers
+* Operations on one positive integer, one negative integer
+* Operations on zero and zero
+  * make sure this fails for $\frac{0}{0}$
+* Operations on zero and any integer
+
+### Boundary Value Testing
+
+* Division by 0, make sure that it throws an exception
+Positive integer adding
+* Adding
