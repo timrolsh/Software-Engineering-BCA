@@ -18,6 +18,17 @@
 
 ## Observer Pattern
 
+* It's generally bad practice to have block of code that's constantly accessing many other parts of the program
+* Way for one object to ask another object for information
+* Makes an object 1 (subject) push information to object 2 (observer) as opposed to object 2 constantly asking object 1 for information (pulling)
+* The subject is the thing that is being observed, the observer is the thing that is observing the subject
+  * The subject calls the callback function of the observer
+    * The subject subscribes and unsubscribes to the observer
+
+### Standard Observer Pattern
+
+* One object has a callback function for another object, that other object calls the callback function to let the first object know that something has happened
+
 ## UML
 
 * standardized diagrams that allow you to visualize structural info about code
