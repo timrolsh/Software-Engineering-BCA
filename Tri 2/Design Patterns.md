@@ -29,6 +29,20 @@
 
 * One object has a callback function for another object, that other object calls the callback function to let the first object know that something has happened
 
+## Service Locator, Dependency Injection
+
+* `Is a` relationship is inheritance (class B extends class A)
+* `Has a` relationship is composition (class A has a class B)
+* **Dependency**: When one class A has another class B (composition), class A depends on class B for its proper functionality, so class B is a dependency of class A
+  * Disadvantages: No reusability, chain of access from one object to another dependency
+* **Service Locator**: Has a class that contains a bunch of other classes that will be dependency for the app, all dependencies are shared instead of just being under one class, easier to implement and access but harder to control and organize
+* Dependency by composition and dependency injection are basically the same, just composition has creation of dependencies internally while dependency injection uses external injection
+
+## Decorator
+
+* Object that goes in and modifies the properties of another object, decorates the other object in a sense
+* downsides are that is adds complexity and doesn't remove any attributes, just adds new attributes
+
 ## UML
 
 * standardized diagrams that allow you to visualize structural info about code
