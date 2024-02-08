@@ -43,6 +43,21 @@
 * Object that goes in and modifies the properties of another object, decorates the other object in a sense
 * downsides are that is adds complexity and doesn't remove any attributes, just adds new attributes
 
+## Factory Pattern
+
+* A class that many other subclass extend, that main class, the factory, creates its subclasses, easier to manage and create stuff
+  * You can also have a separate factory class, and then an interface that all the other classes created by the factory implement
+* Downsides are that it adds complexity and create many subclasses
+* You can chain factory creations, one factory creates an interface and then multiple classes can extend that interface
+
+## Command Pattern
+
+* Command Class: stores a client object, executes the actual command
+* Client Class: requests and creates commands to be executed, passes those commands into the invoker class
+* Invoker Class: Stores all of the command objects, determines when to run the commands and sends them off to receiver class
+* Receiver Class: rReceiver commands from from invoker and executes them
+* This pattern is good for requests, queueing up requests, undoing actions, allows you to de-couple code, the action itself (command) from the block that actually knows how to execute the command (receiver)
+
 ## UML
 
 * standardized diagrams that allow you to visualize structural info about code
